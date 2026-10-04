@@ -1,53 +1,163 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
+
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400&family=Cinzel+Decorative:wght@400&family=Cormorant+Garamond:ital,wght@0,400;1,400&family=DM+Serif+Display:ital@0;1&family=Italianno&family=Jost:wght@300;400&family=Oswald:wght@400;600&family=Raleway:wght@300;400&display=swap');
-html,body{
-  margin:0;
-  width:100%;
-  height:100%;
-  overflow:hidden;
-  background:transparent;
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: transparent !important;
 }
 
-#duda-morph{
- position:fixed;top:50%;left:50%;width:100%;text-align:center;
- font-size:min(9vw,115px);line-height:.9;font-weight:400;color:#fff;
- z-index:99999;pointer-events:none;white-space:nowrap;
+body {
+  background-color: transparent !important;
 }
+
+#duda-morph {
+
+  position: fixed;
+
+  top: 50%;
+  left: 50%;
+
+  width: 100%;
+
+  text-align: center;
+
+  font-size: min(9vw, 115px);
+
+  line-height: 0.9;
+
+  font-weight: 400;
+
+  color: #ffffff;
+
+  z-index: 99999;
+
+  pointer-events: none;
+
+  white-space: nowrap;
+
+}
+
 </style>
+
 </head>
+
 <body>
+
 <div id="duda-morph">DUDA OLIVEIRA</div>
+
 <script>
-const texto=document.getElementById("duda-morph");
-const estilos=[
-{fonte:"'Bodoni Moda'",peso:"400",estilo:"normal",espaco:"-0.065em",escala:"scaleX(0.92)"},
-{fonte:"'Cormorant Garamond'",peso:"400",estilo:"italic",espaco:"-0.025em",escala:"scaleX(1.02)"},
-{fonte:"'Jost'",peso:"300",estilo:"normal",espaco:"0.025em",escala:"scaleX(1.04)"},
-{fonte:"'DM Serif Display'",peso:"400",estilo:"italic",espaco:"-0.045em",escala:"scaleX(0.97)"},
-{fonte:"'Oswald'",peso:"600",estilo:"normal",espaco:"-0.035em",escala:"scaleX(0.82)"},
-{fonte:"'Raleway'",peso:"300",estilo:"normal",espaco:"0.035em",escala:"scaleX(1.03)"},
-{fonte:"'Cinzel Decorative'",peso:"400",estilo:"normal",espaco:"0.01em",escala:"scaleX(0.94)"},
-{fonte:"'Italianno'",peso:"400",estilo:"normal",espaco:"0.01em",escala:"scaleX(1.02)"}
+
+const texto = document.getElementById("duda-morph");
+
+const estilos = [
+
+  {
+    fonte: "'Bodoni Moda'",
+    peso: "400",
+    estilo: "normal",
+    espaco: "-0.065em",
+    escala: "scaleX(0.92)"
+  },
+
+  {
+    fonte: "'Cormorant Garamond'",
+    peso: "400",
+    estilo: "italic",
+    espaco: "-0.025em",
+    escala: "scaleX(1.02)"
+  },
+
+  {
+    fonte: "'Jost'",
+    peso: "300",
+    estilo: "normal",
+    espaco: "0.025em",
+    escala: "scaleX(1.04)"
+  },
+
+  {
+    fonte: "'DM Serif Display'",
+    peso: "400",
+    estilo: "italic",
+    espaco: "-0.045em",
+    escala: "scaleX(0.97)"
+  },
+
+  {
+    fonte: "'Oswald'",
+    peso: "600",
+    estilo: "normal",
+    espaco: "-0.035em",
+    escala: "scaleX(0.82)"
+  },
+
+  {
+    fonte: "'Raleway'",
+    peso: "300",
+    estilo: "normal",
+    espaco: "0.035em",
+    escala: "scaleX(1.03)"
+  },
+
+  {
+    fonte: "'Cinzel Decorative'",
+    peso: "400",
+    estilo: "normal",
+    espaco: "0.01em",
+    escala: "scaleX(0.94)"
+  },
+
+  {
+    fonte: "'Italianno'",
+    peso: "400",
+    estilo: "normal",
+    espaco: "0.01em",
+    escala: "scaleX(1.02)"
+  }
+
 ];
-let i=0;
-function trocarFonte(){
- const estilo=estilos[i];
- texto.style.fontFamily=estilo.fonte;
- texto.style.fontWeight=estilo.peso;
- texto.style.fontStyle=estilo.estilo;
- texto.style.letterSpacing=estilo.espaco;
- texto.style.transform="translate(-50%, -50%) "+estilo.escala;
- i=(i+1)%estilos.length;
+
+let i = 0;
+
+function trocarFonte() {
+
+  const estilo = estilos[i];
+
+  texto.style.fontFamily = estilo.fonte;
+
+  texto.style.fontWeight = estilo.peso;
+
+  texto.style.fontStyle = estilo.estilo;
+
+  texto.style.letterSpacing = estilo.espaco;
+
+  texto.style.transform =
+    "translate(-50%, -50%) " + estilo.escala;
+
+  i = (i + 1) % estilos.length;
+
 }
+
 trocarFonte();
-setInterval(trocarFonte,550);
+
+setInterval(trocarFonte, 550);
+
 </script>
 
-
 </body>
+
 </html>
